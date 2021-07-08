@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:jwilson177hw1/screens/SubScreen/DynmaicLV.dart';
 import 'package:jwilson177hw1/screens/home/addpage.dart';
+import 'package:jwilson177hw1/screens/home/profile.dart';
 import 'package:jwilson177hw1/services/adminalert.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:jwilson177hw1/services/auth.dart';
@@ -65,6 +66,22 @@ class _AdminState extends State<Admin> {
               },
             ),
           ],
+        ),
+        drawer: new Drawer(
+          child: ListView(
+            children: <Widget>[
+              TextButton.icon(
+                icon: Icon(Icons.person),
+                label: Text('Profile'),
+                onPressed: () async {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Profile()),
+                  );
+                },
+              ),
+            ],
+          ),
         ),
         body: Container(
           child: Column(
@@ -141,7 +158,8 @@ class _AddPageState extends State<AddPage> {
       body: Container(
         child: ElevatedButton(
           onPressed: () async {
-            _interstitialAd..show();
+            await _interstitialAd
+              ..show();
             Navigator.of(context)
                 .push(MaterialPageRoute(builder: (context) => Admin()));
           },

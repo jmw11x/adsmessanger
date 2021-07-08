@@ -19,6 +19,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final AuthService _auth = AuthService();
+
   @override
   void initState() {
     super.initState();
@@ -34,6 +36,7 @@ class _MyAppState extends State<MyApp> {
         future: Firebase.initializeApp(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
+            _auth.signInAnon();
             return StreamProvider<MyUser>.value(
               initialData: null,
               value: AuthService().user,
