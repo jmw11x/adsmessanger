@@ -2,6 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:jwilson177hw1/services/adminalert.dart';
 import 'package:jwilson177hw1/services/auth.dart';
 
+class EmailFieldValidator {
+  static String? validate(String value) {
+    return value.isEmpty ? 'cannot email leave empty' : null;
+  }
+}
+
+class PWFieldValidator {
+  static String? validate(String value) {
+    return value.isEmpty ? 'cannot PW leave empty' : null;
+  }
+}
+
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
 
@@ -39,25 +51,25 @@ class _ProfileState extends State<Profile> {
           child: Column(
             children: <Widget>[
               TextFormField(
- validator: (v) => PWFieldValidator.validate(v!),                decoration: InputDecoration(
+                validator: (v) => EmailFieldValidator.validate(v!),
                 decoration: InputDecoration(
                     hintText: 'firstname', helperText: 'Change first name'),
                 onChanged: (v) => {setState(() => firstName = v)},
               ),
               TextFormField(
- validator: (v) => PWFieldValidator.validate(v!),                decoration: InputDecoration(
+                validator: (v) => EmailFieldValidator.validate(v!),
                 decoration: InputDecoration(
                     hintText: 'last name', helperText: 'reset last name'),
                 onChanged: (v) => {setState(() => lastName = v)},
               ),
               TextFormField(
- validator: (v) => PWFieldValidator.validate(v!),                decoration: InputDecoration(
+                validator: (v) => EmailFieldValidator.validate(v!),
                 decoration: InputDecoration(
                     hintText: 'email', helperText: 'login email'),
                 onChanged: (v) => {setState(() => email = v)},
               ),
               TextFormField(
- validator: (v) => PWFieldValidator.validate(v!),                decoration: InputDecoration(
+                validator: (v) => PWFieldValidator.validate(v!),
                 obscureText: true,
                 decoration: InputDecoration(
                     hintText: 'Password', helperText: '6 char + pw'),
