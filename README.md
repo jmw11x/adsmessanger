@@ -1,12 +1,14 @@
 # adsmessanger
 
-When app starts will log you in automatically as anon. THERE IS NO ADDS ON HALF OF MY PROJECT. I had to use flutter web. IOS does not configure on my computer due to hardware issues. THE PROFESSORS CODE DID NOT EVEN WORK.
+When app starts will log you in automatically as anon.
 
-I think it is complete bullshit to assign a project whree FLUTTER WEB HAS ABSOLUTLY 0 SUPPORT FOR ADMOB so does REGULAR JAVASCRIPT/HTML.
+Full working android app is in master(All functionality)
 
-This was an unfair assinment. I am protesting and looking into contacting people higher in the department about this.
 
-Web is in main branch, while 100% working android in master branch.
+https://github.com/jmw11x/MT is the other app. No ads in it. admob did not work on my ios app.
+
+
+UNFAIR ASSIGNMENT ADMOB DOES NOT WORK FOR WEB. 
 
 Web has everything except adds.
 
