@@ -39,25 +39,25 @@ class _ProfileState extends State<Profile> {
           child: Column(
             children: <Widget>[
               TextFormField(
-                validator: (v) => v!.isEmpty ? 'cannot leave empty' : null,
+ validator: (v) => PWFieldValidator.validate(v!),                decoration: InputDecoration(
                 decoration: InputDecoration(
                     hintText: 'firstname', helperText: 'Change first name'),
                 onChanged: (v) => {setState(() => firstName = v)},
               ),
               TextFormField(
-                validator: (v) => v!.isEmpty ? 'cannot leave empty' : null,
+ validator: (v) => PWFieldValidator.validate(v!),                decoration: InputDecoration(
                 decoration: InputDecoration(
                     hintText: 'last name', helperText: 'reset last name'),
                 onChanged: (v) => {setState(() => lastName = v)},
               ),
               TextFormField(
-                validator: (v) => v!.isEmpty ? 'cannot leave empty' : null,
+ validator: (v) => PWFieldValidator.validate(v!),                decoration: InputDecoration(
                 decoration: InputDecoration(
                     hintText: 'email', helperText: 'login email'),
                 onChanged: (v) => {setState(() => email = v)},
               ),
               TextFormField(
-                validator: (v) => v!.isEmpty ? 'cannot leave empty' : null,
+ validator: (v) => PWFieldValidator.validate(v!),                decoration: InputDecoration(
                 obscureText: true,
                 decoration: InputDecoration(
                     hintText: 'Password', helperText: '6 char + pw'),
