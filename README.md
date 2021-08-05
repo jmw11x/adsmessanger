@@ -13,6 +13,5 @@ https://github.com/jmw11x/MT is the other app. No ads in it. admob did not work 
 
 Web has everything except adds.
 
-TO BE CLEAR I DID IOS ANDROID AND WEB NO ADDS WORK ON WEB BUT ARE IN IOS AND ANDROID APPS
-
+This is a app like facebook messanger featuring adds
 
